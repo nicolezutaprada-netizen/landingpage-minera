@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+--bgcolor:#ffffff;
+--textcolor:#000000;
+
+}
+
+body{
+    background-color: var(--bgcolor);
+    color:var(--textcolor)
+}
+body.dark-mode{
+    --bgcolor: #1a1a1a;
+    --textcolor:#ffffff;
+}
+button {
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b3008f;
+}
+
+a:hover {
+    color: #b3007d;
+}
