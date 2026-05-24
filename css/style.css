@@ -24,9 +24,12 @@ body.dark-mode{
     --textcolor:#ffffff;
 }
 
+
+
 nav {
   display: flex;
   align-items: center;
+  gap: 24px;
 }
 
 header {
@@ -35,26 +38,24 @@ header {
   justify-content: space-between;
   padding: 16px;
 }
-
-header nav ul  {
-
+header nav ul {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-    gap: 24px;
-  padding-left: 32px;
-  padding: 16px;
+  gap: 24px;
   list-style: none;
- 
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
-  display:flex;
+  
   text-decoration: none;
 color: var(--textcolor); /* se pone la variable porque body.darmode cambia esa variable a blanco cuando se activa el modo oscuro*/
   font-weight: 500;
 
 }
+
+
 
 #hero {
   display: flex;
@@ -85,10 +86,6 @@ footer a {
   display: inline-flex;
   align-items: center;
 }
-
-
-
-
 
 
 #contacto {
@@ -172,25 +169,67 @@ footer a {
 }
 
 
+#preguntasfrecuentes {
+  padding: 32px;
+
+}
+
+#preguntasfrecuentes h2 {
+  margin-bottom: 24px;
+}
+
+#preguntasfrecuentes h3 {
+  padding: 16px 0;
+  border-top: 1px solid #e0e0e0; /* línea separadora arriba de cada pregunta */
+  font-size: 16px;
+}
+
+#preguntasfrecuentes p {
+  padding-bottom: 16px;
+  color: #555; /* texto de respuesta un poco más suave */
+}
+
+
+
+#galeria {
+  padding: 32px;
+}
+
+#galeria h2 {
+  margin-bottom: 24px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.galeria img {
+  width: 100%;        /* móvil: 1 imagen por fila */
+  border-radius: 8px;
+}
+
+
 
 
 /* ===== TABLET (640px en adelante) ===== */
-@media (min-width: 640px) {
+@media (min-width: 640px) { /* cuando la pantalla sea 640px o más, aplica esto */
   .galeria img {
-    width: 48%;   /* 2 imágenes por fila (el ~4% restante absorbe el gap) */
+    width: 48%; /* en tablet: 2 imágenes por fila (48%+48%=96%, el 4% restante es el gap) */
   }
-}
+} /* si la pantalla es menor a 640px, este bloque completo se ignora */
 
 /* ===== ESCRITORIO (1024px en adelante) ===== */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { /* cuando la pantalla sea 1024px o más, aplica esto */
   #hero {
-    flex-direction: row;       /* hero lado a lado (sobrescribe column de P1.4) */
-    text-align: left;
+    flex-direction: row;  /* en escritorio: el hero se pone en fila (texto e imagen lado a lado), sobrescribe el column que tenías para móvil */
+    text-align: left;     /* en escritorio: el texto se alinea a la izquierda */
   }
   #hero img {
-    max-width: 50%;             /* la imagen no ocupa todo el ancho en desktop */
+    max-width: 50%; /* en escritorio: la imagen ocupa máximo la mitad del hero */
   }
   .galeria img {
-    width: 23%;                  /* 4 imágenes por fila */
+    width: 23%; /* en escritorio: 4 imágenes por fila (23%x4=92%, el 8% restante es el gap) */
   }
-}
+} /* si la pantalla es menor a 1024px, este bloque completo se ignora */
