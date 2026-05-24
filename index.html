@@ -5,34 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Producto - Landing Page</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</style>"
 </head>
 <body>
     <header>
-        <button id="dark-mode-btn">🌙 Modo Oscuro</button>
-        <nav>
-            <ul>
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#caracteristicas">Producto</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <button id="dark-mode-btn">🌙 Modo Oscuro</button>
+  <nav>
+    <a href="#hero" class="logo">Blusa Gabriela</a>
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#caracteristicas">Producto</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
     <main>
         <section id="hero">
             <h1>Nombre del producto</h1>
             <p>Una frase que describa su valor</p>
-            <img src="img/hero.jpg" alt="Mockup del producto sobre un escritorio minimalista">
+            <img src="img/hero.png" alt="Mockup del producto sobre un escritorio minimalista">
         </section>
 
-        <section id="caracteristicas">
-            <h2>Características</h2>
-            <ul>
-                <li>Característica 1</li>
-                <li>Característica 2</li>
-                <li>Característica 3</li>
-            </ul>
-        </section>
+
+
+<section id="caracteristicas"> <!-- PARA AGRUPAR LAS CARDS USAMOS EL DIV -->
+  <h2>Características</h2>
+  <div class="cards"> 
+    <article class="card"> 
+      <img src="img/tela.png" alt="" width="48" height="48">
+      <h3>Tela suave y fresca</h3>
+      <p>Confeccionada en algodón 100% transpirable, ideal para el calor.</p>
+    </article>
+    <article class="card">
+      <img src="img/versatil.png" alt="" width="48" height="48">
+      <h3>Diseño versátil</h3>
+      <p>Perfecta para el día a día, salidas casuales o eventos especiales.</p>
+    </article>
+    <article class="card">
+      <img src="img/tallas.png" alt="" width="48" height="48">
+      <h3>Tallas inclusivas</h3>
+      <p>Disponible desde talla S hasta XXL para que todas se sientan cómodas.</p>
+    </article>
+  </div>
+</section>
+
+
 
         <section id="preguntasfrecuentes">
             <h2>Preguntas Frecuentes</h2>
@@ -58,37 +77,47 @@
 
                 <label for="motivo">Motivo del Mensaje</label>
                 <select id="motivo" name="motivo">
-                    <option value="">-- Selecciona una opción --</option>
+                    <option value="">Selecciona una opción</option>
                     <option value="consulta">Consulta</option>
                     <option value="reclamo">Reclamo</option>
                     <option value="sugerencia">Sugerencia</option>
                 </select>
 
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí un mensaje..."></textarea>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe un mensaje aquí..."></textarea>
 
                 <button type="submit">Enviar</button>
             </form>
         </section>
+
+        <section id="galeria">
+  <h2>Galería</h2>
+  <div class="galeria">
+    <img src="img/g1.jpg" alt="Vista 1 del producto">
+    <img src="img/g2.jpg" alt="Vista 2 del producto">
+    <img src="img/g3.jpg" alt="Vista 3 del producto">
+    <img src="img/g4.jpg" alt="Vista 4 del producto">
+  </div>
+</section>
     </main>
 
     <footer>
-        <p>Contacto: contacto@miempresa.com</p>
+        <p>Contacto: loydabebelupradaazuero@gmail.com</p>
         
         <a href="#" aria-label="Síguenos en Facebook">
-            <img src="img/facebook.svg" alt="" width="32" height="32">
+            <img src="img/facebook.png" alt="" width="32" height="32">
         </a>
 
         <a href="#" aria-label="Síguenos en Instagram">
-            <img src="img/instagram.svg" alt="" width="32" height="32">
+            <img src="img/instagram.png" alt="" width="32" height="32">
         </a>
 
         <a href="#" aria-label="Síguenos en TikTok">
-            <img src="img/tiktok.svg" alt="" width="32" height="32">
+            <img src="img/tiktok.png" alt="" width="32" height="32">
         </a>
 
-        <a href="#" aria-label="Síguenos en LinkedIn">
-            <img src="img/linkedin.svg" alt="" width="32" height="32">
+        <a href="#" aria-label="Contacto">
+            <img src="img/wsp.png" alt="" width="32" height="32">
         </a>
     </footer>
 <script>
