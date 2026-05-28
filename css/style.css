@@ -20,7 +20,7 @@ body{
 }
 
 body.dark-mode{
-    --bgcolor: #1a1a1a;
+    --bgcolor: #000000;
     --textcolor:#ffffff;
 }
 
@@ -55,11 +55,13 @@ color: var(--textcolor); /* se pone la variable porque body.darmode cambia esa v
 
 }
 
+/* justify-content → mover elementos a izquierda, centro o derecha
+align-items → mover elementos arriba, centro o abajo*/
 
 
 #hero {
   display: flex;
-  flex-direction:column;     /* base: apilado en móvil */
+  flex-direction:column;     /* base: apilado en móvil, decide hacia dónde van. El justify-content decide dónde dentro de esa dirección.  */ 
   align-items: center;
   gap: 32px;
   padding: 32px;
@@ -77,7 +79,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
-  background: #f5f5f5;
+ 
   flex-wrap: wrap;  /* para q los q sobran bajen a la 2da linea */
   gap: 16px;        /*  para que no queden pegados al bajar a la 2da linea*/
 }
@@ -147,7 +149,7 @@ footer a {
   padding: 16px;        /* espacio interno entre el borde y el contenido */
   border: 1px solid #e0e0e0;  /* borde gris claro de 1px sólido */
   border-radius: 8px;   /* esquinas redondeadas */
-  background: #fff;     /* fondo blanco */
+   background-color: var(--bgcolor);  /* igual que en .plan */
 }
 
 #galeria {
@@ -211,12 +213,155 @@ footer a {
 }
 
 
+/* ========================= PRECIOS.HTML ========================= */
+.planes {
+  display: grid;
+  gap: 24px;
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.plan {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+   background-color: var(--bgcolor);;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan .precio {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+#content-precios {
+  text-align: center;
+}
+
+.plan ul {
+  list-style: none;
+  text-align: center;
+}
+
+
+.plan a {
+  color: var(--textcolor);
+  text-decoration: none;
+  border: #1a1a1a 1px solid;
+  border-radius: 5px;
+  padding: 4px 12px;
+}
+
+
+.clientes {
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.logos {
+  display: grid;
+  /* auto-fit: ajusta automáticamente cuántas columnas caben en el ancho disponible, Grid lo calcula */
+  /* minmax(150px, 1fr): cada columna mide mínimo 150px, máximo 1 fracción (lo que sobre) */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.logo-cliente {
+  background: #797676;
+  border: #1a1a1a 1px solid;
+   color: var(--textcolor);
+  padding: 24px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+
+/* ========================= FAQ.HTML ========================= */
+
+/* BASE: móvil — todo apilado en 1 columna */
+.faq-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  gap: 16px;
+  min-height: 100vh;
+
+}
+
+.faq-layout header {
+  grid-area: header;
+}
+
+.faq-nav {
+  grid-area: nav;
+
+
+  padding: 16px;
+  margin: 0px 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.faq-main {
+  grid-area: main;
+
+  padding: 16px;
+}
+
+.faq-layout footer {
+  grid-area: footer;
+}
+
+
+.faq-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-main details {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+}
+
+.faq-main summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-layout h1 {
+   padding: 16px;
+   text-align: center;
+}
 
 
 /* ===== TABLET (640px en adelante) ===== */
-@media (min-width: 640px) { /* cuando la pantalla sea 640px o más, aplica esto */
+@media (min-width: 640px) { /* cuando la pantalla sea 640px o más, aplica esto, ESTAMOS USANDO MIN WIDTH PORQUE PARTIMOS DE MOBILE ( 400 PX)  MIN WIDTH LO QUE NOS DICE ES QUE  LO Q ESTA DENTRO DE LOS {} SE CUMPLIRA SI EL ANCHO DE LA PANTALLA MIDE EL VALOR INDICADO O MAS*/
   .galeria img {
     width: 48%; /* en tablet: 2 imágenes por fila (48%+48%=96%, el 4% restante es el gap) */
+  }
+    .planes {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+   .faq-layout {
+    grid-template-areas:
+      "header header"
+      "nav    main"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
   }
 } /* si la pantalla es menor a 640px, este bloque completo se ignora */
 
@@ -231,5 +376,8 @@ footer a {
   }
   .galeria img {
     width: 23%; /* en escritorio: 4 imágenes por fila (23%x4=92%, el 8% restante es el gap) */
+  }
+      .planes {
+    grid-template-columns: repeat(4, 1fr) ;  /* equivale a 1fr 1fr 1fr 1fr */
   }
 } /* si la pantalla es menor a 1024px, este bloque completo se ignora */

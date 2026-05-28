@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synaptech AI - Planes y Precios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="dark-mode-btn">🌙 Modo Oscuro</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#caracteristicas">Características</a></li>
+                <li><a href="index.html#galeria">Galería</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <a href="precios.html">Precios</a>
+            <a href="faq.html" id="icono-faq" aria-label="Preguntas frecuentes">
+                <img src="img/faq.svg" alt="" width="24" height="24">
+            </a>
+        </nav>
+    </header>
+
+
+    <main>
+        <div id="content-precios">
+            <h1>Planes y precios</h1>
+            <p>Elige el plan que mejor se ajuste a tu aprendizaje.</p>
+        </div>
+        <div class="planes">
+            <article class="plan">
+                <h2>Free</h2>
+                <p class="precio">$0</p>
+                <ul>
+                    <li>Introducción a la IA</li>
+                    <li>2 lecciones gratuitas</li>
+                </ul>
+                <a href="#" class="btn">Empezar gratis</a>
+            </article>
+            <article class="plan">
+                <h2>Starter</h2>
+                <p class="precio">$9/mes</p>
+                <ul>
+                    <li>Todo lo del Free</li>
+                    <li>Acceso completo al curso</li>
+                </ul>
+                <a href="#" class="btn">Probar Starter</a>
+            </article>
+            <article class="plan">
+                <h2>Pro</h2>
+                <p class="precio">$19/mes</p>
+                <ul>
+                    <li>Todo lo del Starter</li>
+                    <li>Sesiones en vivo</li>
+                    <li>Certificado digital</li>
+                </ul>
+                <a href="#" class="btn">Probar 14 días</a>
+            </article>
+            <article class="plan">
+                <h2>Enterprise</h2>
+                <p class="precio">$99/mes</p>
+                <ul>
+                    <li>Todo lo del Pro</li>
+                    <li>Licencias para equipo</li>
+                    <li>Soporte dedicado</li>
+                </ul>
+                <a href="#" class="btn">Contactar ventas</a>
+            </article>
+        </div>
+
+        <section class="clientes">
+  <h2>Marcas que confían en nosotros</h2>
+  <div class="logos">
+    <div class="logo-cliente">ACME</div>
+    <div class="logo-cliente">TechCo</div>
+    <div class="logo-cliente">StartupX</div>
+    <div class="logo-cliente">BigCorp</div>
+    <div class="logo-cliente">GlobalInc</div>
+    <div class="logo-cliente">FutureLab</div>
+  </div>
+</section>
+    </main>
+
+    <footer>
+        <p>Contacto: nicolezutaprada@gmail.com</p>
+        
+        <div id="redessociales">
+        <a href="#" aria-label="Síguenos en Facebook">
+            <img src="img/facebook.png" alt="" width="32" height="32">
+        </a>
+        <a href="#" aria-label="Síguenos en Instagram">
+            <img src="img/instagram.png" alt="" width="32" height="32">
+        </a>
+        <a href="#" aria-label="Síguenos en TikTok">
+            <img src="img/tiktok.png" alt="" width="32" height="32">
+        </a>
+        <a href="#" aria-label="Contacto">
+            <img src="img/wsp.png" alt="" width="32" height="32">
+        </a>
+
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('dark-mode-btn');
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
