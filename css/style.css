@@ -8,7 +8,45 @@
 :root {
     --bgcolor: #0a0a0a;
     --textcolor: #f0f0f0;
+
 }
+
+
+:root {
+  --bg-main: #0a0a0a;
+  --bg-section: #05060b;
+  --bg-card: rgba(255, 255, 255, 0.03);
+
+  --color-text: #f0f0f0;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-muted: rgba(255, 255, 255, 0.55);
+  --color-muted-2: rgba(255, 255, 255, 0.6);
+  --color-accent: #ff6b2b;
+  --color-stars: #ffb800;
+
+  --border-soft: 1px solid rgba(255, 255, 255, 0.08);
+  --border-accent: 1px solid rgba(255, 107, 43, 0.3);
+  --border-accent-strong: 1px solid rgba(255, 107, 43, 0.5);
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 18px;
+  --radius-pill: 30px;
+  --radius-full: 999px;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+
+  --font-main: "Inter", sans-serif;
+
+  --transition-fast: all 0.2s;
+  --transition-normal: all 0.3s;
+}
+
+
 
 
 
@@ -71,7 +109,7 @@ align-items → mover elementos arriba, centro o abajo*/
 
 
 
-/* */
+/*-----------------------------------------------seccion hero-----------------------------------------------*/
 
 #hero {
   display: grid;
@@ -180,7 +218,7 @@ align-items → mover elementos arriba, centro o abajo*/
 .hero-av:first-child { margin-left: 0; }
 .hero-social-text p { font-size: 12px; color: rgba(255,255,255,0.6); margin: 0; }
 .hero-social-text b { color: #fff; }
-.hero-stars { color: #ffb800; font-size: 11px; }
+.hero-social-text .hero-stars { color: #ffb800; font-size: 11px; }
 
 .hero-right {
   position: relative;
@@ -222,6 +260,7 @@ align-items → mover elementos arriba, centro o abajo*/
 }
 .stat-1 { top: 8%; right: 6%; }
 .stat-2 { bottom: 12%; right: 22%; }
+
 
 
 
@@ -1085,18 +1124,37 @@ text-align: center;
 
   .stat-1 {
     top: 160px;
-    right: -20px;
+    right: 4px;
   }
 
   .stat-2 {
-    bottom: 20px;
-    right: 20px;
+    bottom: 35px;
+    right: 30px;
+   
   }
 
   .hero-actions {
     flex-wrap: wrap;
   }
+
+.stat-float {
+    padding: 6px 8px;
+    min-width: 75px;
+    border-radius: 10px;
+  }
+
+  .stat-float b {
+    font-size: 14px;
+  }
+
+  .stat-float span {
+    font-size: 8px;
+  }
 }
+
+
+
+
 
 
 
