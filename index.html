@@ -231,7 +231,8 @@
                         <input type="checkbox" id="acepto" name="acepto" required>
                         Acepto los términos y condiciones
                     </label>
-<button type="submit" onclick="if(this.form.checkValidity()){event.preventDefault(); alert('✓ Solicitud enviada correctamente. Te responderemos en menos de 24 horas.'); this.textContent='✓ Enviado'; this.disabled=true; this.form.reset();}">Enviar solicitud</button>
+<button type="submit" onclick="if(this.form.checkValidity()){event.preventDefault(); document.getElementById('msg-ok').style.display='block'; this.textContent='✓ Enviado'; this.disabled=true; this.form.reset();}">Enviar solicitud</button>
+<p id="msg-ok" style="display:none; margin-top:1rem; padding:1rem; background:#e8f5e9; color:#2e7d32; border-left:4px solid #2e7d32; border-radius:6px; font-weight:600;">✓ Solicitud enviada correctamente. Te responderemos en menos de 24 horas.</p>
                 </form>
             </section>
 
