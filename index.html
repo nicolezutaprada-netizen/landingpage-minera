@@ -231,8 +231,7 @@
                         <input type="checkbox" id="acepto" name="acepto" required>
                         Acepto los términos y condiciones
                     </label>
-
-                    <button type="submit" onclick="if(this.form.checkValidity()){event.preventDefault(); this.textContent='✓ Enviado'; this.disabled=true; this.form.reset();}">Enviar solicitud</button>
+<button type="submit" onclick="if(this.form.checkValidity()){event.preventDefault(); alert('✓ Solicitud enviada correctamente. Te responderemos en menos de 24 horas.'); this.textContent='✓ Enviado'; this.disabled=true; this.form.reset();}">Enviar solicitud</button>
                 </form>
             </section>
 
