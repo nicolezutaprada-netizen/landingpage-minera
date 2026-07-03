@@ -100,3 +100,6 @@ Proyecto universitario — Universidad Peruana de Ciencias Aplicadas (UPC) · 20
 ## Licencia
 
 Uso académico. Proyecto desarrollado con fines educativos.
+
+## Demo
+🔗 [Ver en GitHub Pages](https://nicolezutaprada-netizen.github.io/landingpage-minera/)
